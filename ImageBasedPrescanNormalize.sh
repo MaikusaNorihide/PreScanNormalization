@@ -43,25 +43,15 @@ for run in "${runs[@]}" ; do
 done
  
 #Add dwi
-dwi_post=("_acq-107axis_dir-PA_dwi.nii.gz" "_acq-107axis_dir-AP_dwi.nii.gz" "_acq-99axis_dir-PA_dwi.nii.gz" "_acq-99axis_dir-AP_dwi.nii.gz")
+#dwi_post=("_acq-107axis_dir-PA_dwi.nii.gz" "_acq-107axis_dir-AP_dwi.nii.gz" "_acq-99axis_dir-PA_dwi.nii.gz" "_acq-99axis_dir-AP_dwi.nii.gz")
+dwi_post=("_acq-99axis_dir-PA_dwi.nii.gz" "_acq-99axis_dir-AP_dwi.nii.gz")
+
 for post in "${dwi_post[@]}" ; do
 	if [  -f ${SouceDir}/dwi/${Subject}${post} ];then 
 		TagFiles+=(${SouceDir}/dwi/${Subject}${post})
 	fi
 done
 
-#if [  -f ${SouceDir}/dwi/${Subject}_acq-107axis_dir-PA_dwi.nii.gz ];then 
-#	TagFiles+=(${SouceDir}/dwi/${Subject}_acq-107axis_dir-PA_dwi.nii.gz)
-#fi
-#if [  -f ${SouceDir}/dwi/${Subject}_acq-107axis_dir-AP_dwi.nii.gz ];then 
-#	TagFiles+=(${SouceDir}/dwi/${Subject}_acq-107axis_dir-AP_dwi.nii.gz)
-#fi
-#if [  -f ${SouceDir}/dwi/${Subject}_acq-99axis_dir-PA_dwi.nii.gz ];then 
-#	TagFiles+=(${SouceDir}/dwi/${Subject}_acq-99axis_dir-PA_dwi.nii.gz)
-#fi
-#if [  -f ${SouceDir}/dwi/${Subject}_acq-99axis_dir-AP_dwi.nii.gz ];then 
-#	TagFiles+=(${SouceDir}/dwi/${Subject}_acq-99axis_dir-AP_dwi.nii.gz)
-#fi
 
 
 
