@@ -118,8 +118,8 @@ for Tagfile in "${TagFiles[@]}" ; do
 	# Normalize target volume
 	${FSLDIR}/bin/fslmaths ${Tagfile} -mul ${WorkingDir}/Normalize2${Target} ${WorkingDir}/${Target}_Norm
 
-	#cp ${Tagfile} $(remove_ext ${Tagfile})_NotNorm.nii.gz
-	#cp ${WorkingDir}/${Target}_Norm.nii.gz ${Tagfile} 
+	cp ${Tagfile} $(remove_ext ${Tagfile})_NotNorm.nii.gz
+	cp ${WorkingDir}/${Target}_Norm.nii.gz ${Tagfile} 
 
 	
 done
